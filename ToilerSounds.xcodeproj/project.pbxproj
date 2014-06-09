@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04E8D5CA1944C8D3004B0EAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5C91944C8D3004B0EAB /* Foundation.framework */; };
+		04E8D5CC1944C8D3004B0EAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5CB1944C8D3004B0EAB /* CoreGraphics.framework */; };
+		04E8D5CE1944C8D3004B0EAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5CD1944C8D3004B0EAB /* UIKit.framework */; };
+		04E8D5D01944C8D3004B0EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5CF1944C8D3004B0EAB /* CoreData.framework */; };
+		04E8D5D61944C8D3004B0EAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E8D5D41944C8D3004B0EAB /* InfoPlist.strings */; };
+		04E8D5D81944C8D3004B0EAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D5D71944C8D3004B0EAB /* main.m */; };
+		04E8D5DC1944C8D3004B0EAB /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D5DB1944C8D3004B0EAB /* TSAppDelegate.m */; };
+		04E8D5DF1944C8D3004B0EAB /* ToilerSounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D5DD1944C8D3004B0EAB /* ToilerSounds.xcdatamodeld */; };
+		04E8D5E11944C8D3004B0EAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8D5E01944C8D3004B0EAB /* Images.xcassets */; };
+		04E8D5E81944C8D4004B0EAB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5E71944C8D4004B0EAB /* XCTest.framework */; };
+		04E8D5E91944C8D4004B0EAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5C91944C8D3004B0EAB /* Foundation.framework */; };
+		04E8D5EA1944C8D4004B0EAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5CD1944C8D3004B0EAB /* UIKit.framework */; };
+		04E8D5EB1944C8D4004B0EAB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5CF1944C8D3004B0EAB /* CoreData.framework */; };
+		04E8D5F31944C8D4004B0EAB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E8D5F11944C8D4004B0EAB /* InfoPlist.strings */; };
+		04E8D5F51944C8D4004B0EAB /* ToilerSoundsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D5F41944C8D4004B0EAB /* ToilerSoundsTests.m */; };
+		04E8D6221944E744004B0EAB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D6211944E744004B0EAB /* SWRevealViewController.m */; };
+		04E8D6251944E899004B0EAB /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D6241944E899004B0EAB /* RearViewController.m */; };
+		04E8D6281944E8AC004B0EAB /* FrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D6271944E8AC004B0EAB /* FrontViewController.m */; };
+		04E8D62C1944E93D004B0EAB /* MySoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D62B1944E93D004B0EAB /* MySoundsViewController.m */; };
+		04E8D62F1944E94E004B0EAB /* PartySoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D62E1944E94E004B0EAB /* PartySoundsViewController.m */; };
+		04E8D6321944E960004B0EAB /* RecordSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D6311944E960004B0EAB /* RecordSoundsViewController.m */; };
+		04E8D637194505E9004B0EAB /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E8D636194505E9004B0EAB /* Constants.m */; };
+		04F46AC119451D0400DFFBC6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F46AC019451D0400DFFBC6 /* AudioToolbox.framework */; };
+		04F46AC41945255A00DFFBC6 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F46AC31945255A00DFFBC6 /* Sound.m */; };
+		04F46AC81945259C00DFFBC6 /* SoundStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F46AC71945259C00DFFBC6 /* SoundStore.m */; };
+		04F46ACB194525AF00DFFBC6 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F46ACA194525AF00DFFBC6 /* DownloadManager.m */; };
+		04F46ACE194525F600DFFBC6 /* SoundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F46ACD194525F600DFFBC6 /* SoundTableViewCell.m */; };
+		04F46AD51945288D00DFFBC6 /* button-play_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46ACF1945288D00DFFBC6 /* button-play_pressed.png */; };
+		04F46AD61945288D00DFFBC6 /* button-play_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46AD01945288D00DFFBC6 /* button-play_pressed@2x.png */; };
+		04F46AD71945288D00DFFBC6 /* button-play_pressing.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46AD11945288D00DFFBC6 /* button-play_pressing.png */; };
+		04F46AD81945288D00DFFBC6 /* button-play_pressing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46AD21945288D00DFFBC6 /* button-play_pressing@2x.png */; };
+		04F46AD91945288D00DFFBC6 /* button-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46AD31945288D00DFFBC6 /* button-play.png */; };
+		04F46ADA1945288D00DFFBC6 /* button-play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46AD41945288D00DFFBC6 /* button-play@2x.png */; };
+		04F46ADE19453E5D00DFFBC6 /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F46ADD19453E5D00DFFBC6 /* SoundTableViewCell.xib */; };
+		04F46AE119454D2600DFFBC6 /* SoundRecordePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F46AE019454D2600DFFBC6 /* SoundRecordePlayer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04E8D5EC1944C8D4004B0EAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04E8D5BE1944C8D3004B0EAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04E8D5C51944C8D3004B0EAB;
+			remoteInfo = ToilerSounds;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04E8D5C61944C8D3004B0EAB /* ToilerSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToilerSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E8D5C91944C8D3004B0EAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04E8D5CB1944C8D3004B0EAB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04E8D5CD1944C8D3004B0EAB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04E8D5CF1944C8D3004B0EAB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		04E8D5D31944C8D3004B0EAB /* ToilerSounds-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToilerSounds-Info.plist"; sourceTree = "<group>"; };
+		04E8D5D51944C8D3004B0EAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04E8D5D71944C8D3004B0EAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04E8D5D91944C8D3004B0EAB /* ToilerSounds-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ToilerSounds-Prefix.pch"; sourceTree = "<group>"; };
+		04E8D5DA1944C8D3004B0EAB /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
+		04E8D5DB1944C8D3004B0EAB /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
+		04E8D5DE1944C8D3004B0EAB /* ToilerSounds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToilerSounds.xcdatamodel; sourceTree = "<group>"; };
+		04E8D5E01944C8D3004B0EAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04E8D5E61944C8D4004B0EAB /* ToilerSoundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToilerSoundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E8D5E71944C8D4004B0EAB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		04E8D5F01944C8D4004B0EAB /* ToilerSoundsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToilerSoundsTests-Info.plist"; sourceTree = "<group>"; };
+		04E8D5F21944C8D4004B0EAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04E8D5F41944C8D4004B0EAB /* ToilerSoundsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToilerSoundsTests.m; sourceTree = "<group>"; };
+		04E8D6201944E744004B0EAB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		04E8D6211944E744004B0EAB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		04E8D6231944E899004B0EAB /* RearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewController.h; sourceTree = "<group>"; };
+		04E8D6241944E899004B0EAB /* RearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewController.m; sourceTree = "<group>"; };
+		04E8D6261944E8AC004B0EAB /* FrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontViewController.h; sourceTree = "<group>"; };
+		04E8D6271944E8AC004B0EAB /* FrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontViewController.m; sourceTree = "<group>"; };
+		04E8D62A1944E93D004B0EAB /* MySoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySoundsViewController.h; sourceTree = "<group>"; };
+		04E8D62B1944E93D004B0EAB /* MySoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySoundsViewController.m; sourceTree = "<group>"; };
+		04E8D62D1944E94E004B0EAB /* PartySoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartySoundsViewController.h; sourceTree = "<group>"; };
+		04E8D62E1944E94E004B0EAB /* PartySoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartySoundsViewController.m; sourceTree = "<group>"; };
+		04E8D6301944E960004B0EAB /* RecordSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordSoundsViewController.h; sourceTree = "<group>"; };
+		04E8D6311944E960004B0EAB /* RecordSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordSoundsViewController.m; sourceTree = "<group>"; };
+		04E8D635194505E9004B0EAB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		04E8D636194505E9004B0EAB /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		04F46ABF19451CDE00DFFBC6 /* ToilerSounds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ToilerSounds.entitlements; sourceTree = "<group>"; };
+		04F46AC019451D0400DFFBC6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		04F46AC21945255A00DFFBC6 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		04F46AC31945255A00DFFBC6 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		04F46AC61945259C00DFFBC6 /* SoundStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundStore.h; sourceTree = "<group>"; };
+		04F46AC71945259C00DFFBC6 /* SoundStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundStore.m; sourceTree = "<group>"; };
+		04F46AC9194525AF00DFFBC6 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		04F46ACA194525AF00DFFBC6 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		04F46ACC194525F600DFFBC6 /* SoundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTableViewCell.h; sourceTree = "<group>"; };
+		04F46ACD194525F600DFFBC6 /* SoundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundTableViewCell.m; sourceTree = "<group>"; };
+		04F46ACF1945288D00DFFBC6 /* button-play_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play_pressed.png"; path = "Assets/button-play_pressed.png"; sourceTree = "<group>"; };
+		04F46AD01945288D00DFFBC6 /* button-play_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play_pressed@2x.png"; path = "Assets/button-play_pressed@2x.png"; sourceTree = "<group>"; };
+		04F46AD11945288D00DFFBC6 /* button-play_pressing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play_pressing.png"; path = "Assets/button-play_pressing.png"; sourceTree = "<group>"; };
+		04F46AD21945288D00DFFBC6 /* button-play_pressing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play_pressing@2x.png"; path = "Assets/button-play_pressing@2x.png"; sourceTree = "<group>"; };
+		04F46AD31945288D00DFFBC6 /* button-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play.png"; path = "Assets/button-play.png"; sourceTree = "<group>"; };
+		04F46AD41945288D00DFFBC6 /* button-play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play@2x.png"; path = "Assets/button-play@2x.png"; sourceTree = "<group>"; };
+		04F46ADD19453E5D00DFFBC6 /* SoundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundTableViewCell.xib; sourceTree = "<group>"; };
+		04F46ADF19454D2600DFFBC6 /* SoundRecorderPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundRecorderPlayer.h; sourceTree = "<group>"; };
+		04F46AE019454D2600DFFBC6 /* SoundRecordePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundRecordePlayer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04E8D5C31944C8D3004B0EAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E8D5CC1944C8D3004B0EAB /* CoreGraphics.framework in Frameworks */,
+				04E8D5D01944C8D3004B0EAB /* CoreData.framework in Frameworks */,
+				04F46AC119451D0400DFFBC6 /* AudioToolbox.framework in Frameworks */,
+				04E8D5CE1944C8D3004B0EAB /* UIKit.framework in Frameworks */,
+				04E8D5CA1944C8D3004B0EAB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E8D5E31944C8D4004B0EAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E8D5E81944C8D4004B0EAB /* XCTest.framework in Frameworks */,
+				04E8D5EB1944C8D4004B0EAB /* CoreData.framework in Frameworks */,
+				04E8D5EA1944C8D4004B0EAB /* UIKit.framework in Frameworks */,
+				04E8D5E91944C8D4004B0EAB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E8D5BD1944C8D3004B0EAB = {
+			isa = PBXGroup;
+			children = (
+				04F46ADF19454D2600DFFBC6 /* SoundRecorderPlayer.h */,
+				04F46AE019454D2600DFFBC6 /* SoundRecordePlayer.m */,
+				04E8D5D11944C8D3004B0EAB /* ToilerSounds */,
+				04E8D5EE1944C8D4004B0EAB /* ToilerSoundsTests */,
+				04E8D5C81944C8D3004B0EAB /* Frameworks */,
+				04E8D5C71944C8D3004B0EAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04E8D5C71944C8D3004B0EAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04E8D5C61944C8D3004B0EAB /* ToilerSounds.app */,
+				04E8D5E61944C8D4004B0EAB /* ToilerSoundsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04E8D5C81944C8D3004B0EAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04F46AC019451D0400DFFBC6 /* AudioToolbox.framework */,
+				04E8D5C91944C8D3004B0EAB /* Foundation.framework */,
+				04E8D5CB1944C8D3004B0EAB /* CoreGraphics.framework */,
+				04E8D5CD1944C8D3004B0EAB /* UIKit.framework */,
+				04E8D5CF1944C8D3004B0EAB /* CoreData.framework */,
+				04E8D5E71944C8D4004B0EAB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04E8D5D11944C8D3004B0EAB /* ToilerSounds */ = {
+			isa = PBXGroup;
+			children = (
+				04F46ABF19451CDE00DFFBC6 /* ToilerSounds.entitlements */,
+				04F46AC51945256900DFFBC6 /* Model */,
+				04E8D6331944E968004B0EAB /* Recording */,
+				04E8D6341944E974004B0EAB /* Sound lists */,
+				04E8D6291944E8B7004B0EAB /* Hamburger nav */,
+				04E8D5DA1944C8D3004B0EAB /* TSAppDelegate.h */,
+				04E8D5DB1944C8D3004B0EAB /* TSAppDelegate.m */,
+				04E8D5E01944C8D3004B0EAB /* Images.xcassets */,
+				04E8D5DD1944C8D3004B0EAB /* ToilerSounds.xcdatamodeld */,
+				04E8D5D21944C8D3004B0EAB /* Supporting Files */,
+				04E8D635194505E9004B0EAB /* Constants.h */,
+				04E8D636194505E9004B0EAB /* Constants.m */,
+			);
+			path = ToilerSounds;
+			sourceTree = "<group>";
+		};
+		04E8D5D21944C8D3004B0EAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04F46ACF1945288D00DFFBC6 /* button-play_pressed.png */,
+				04F46AD01945288D00DFFBC6 /* button-play_pressed@2x.png */,
+				04F46AD11945288D00DFFBC6 /* button-play_pressing.png */,
+				04F46AD21945288D00DFFBC6 /* button-play_pressing@2x.png */,
+				04F46AD31945288D00DFFBC6 /* button-play.png */,
+				04F46AD41945288D00DFFBC6 /* button-play@2x.png */,
+				04E8D5D31944C8D3004B0EAB /* ToilerSounds-Info.plist */,
+				04E8D5D41944C8D3004B0EAB /* InfoPlist.strings */,
+				04E8D5D71944C8D3004B0EAB /* main.m */,
+				04E8D5D91944C8D3004B0EAB /* ToilerSounds-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04E8D5EE1944C8D4004B0EAB /* ToilerSoundsTests */ = {
+			isa = PBXGroup;
+			children = (
+				04E8D5F41944C8D4004B0EAB /* ToilerSoundsTests.m */,
+				04E8D5EF1944C8D4004B0EAB /* Supporting Files */,
+			);
+			path = ToilerSoundsTests;
+			sourceTree = "<group>";
+		};
+		04E8D5EF1944C8D4004B0EAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04E8D5F01944C8D4004B0EAB /* ToilerSoundsTests-Info.plist */,
+				04E8D5F11944C8D4004B0EAB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04E8D6291944E8B7004B0EAB /* Hamburger nav */ = {
+			isa = PBXGroup;
+			children = (
+				04E8D6261944E8AC004B0EAB /* FrontViewController.h */,
+				04E8D6271944E8AC004B0EAB /* FrontViewController.m */,
+				04E8D6231944E899004B0EAB /* RearViewController.h */,
+				04E8D6241944E899004B0EAB /* RearViewController.m */,
+				04E8D6201944E744004B0EAB /* SWRevealViewController.h */,
+				04E8D6211944E744004B0EAB /* SWRevealViewController.m */,
+			);
+			name = "Hamburger nav";
+			sourceTree = "<group>";
+		};
+		04E8D6331944E968004B0EAB /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				04E8D6301944E960004B0EAB /* RecordSoundsViewController.h */,
+				04E8D6311944E960004B0EAB /* RecordSoundsViewController.m */,
+			);
+			name = Recording;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		04E8D6341944E974004B0EAB /* Sound lists */ = {
+			isa = PBXGroup;
+			children = (
+				04E8D62A1944E93D004B0EAB /* MySoundsViewController.h */,
+				04E8D62B1944E93D004B0EAB /* MySoundsViewController.m */,
+				04E8D62D1944E94E004B0EAB /* PartySoundsViewController.h */,
+				04E8D62E1944E94E004B0EAB /* PartySoundsViewController.m */,
+				04F46ACC194525F600DFFBC6 /* SoundTableViewCell.h */,
+				04F46ACD194525F600DFFBC6 /* SoundTableViewCell.m */,
+				04F46ADD19453E5D00DFFBC6 /* SoundTableViewCell.xib */,
+			);
+			name = "Sound lists";
+			sourceTree = "<group>";
+		};
+		04F46AC51945256900DFFBC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04F46AC21945255A00DFFBC6 /* Sound.h */,
+				04F46AC31945255A00DFFBC6 /* Sound.m */,
+				04F46AC61945259C00DFFBC6 /* SoundStore.h */,
+				04F46AC71945259C00DFFBC6 /* SoundStore.m */,
+				04F46AC9194525AF00DFFBC6 /* DownloadManager.h */,
+				04F46ACA194525AF00DFFBC6 /* DownloadManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04E8D5C51944C8D3004B0EAB /* ToilerSounds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E8D5F81944C8D4004B0EAB /* Build configuration list for PBXNativeTarget "ToilerSounds" */;
+			buildPhases = (
+				04E8D5C21944C8D3004B0EAB /* Sources */,
+				04E8D5C31944C8D3004B0EAB /* Frameworks */,
+				04E8D5C41944C8D3004B0EAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToilerSounds;
+			productName = ToilerSounds;
+			productReference = 04E8D5C61944C8D3004B0EAB /* ToilerSounds.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04E8D5E51944C8D4004B0EAB /* ToilerSoundsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E8D5FB1944C8D4004B0EAB /* Build configuration list for PBXNativeTarget "ToilerSoundsTests" */;
+			buildPhases = (
+				04E8D5E21944C8D4004B0EAB /* Sources */,
+				04E8D5E31944C8D4004B0EAB /* Frameworks */,
+				04E8D5E41944C8D4004B0EAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04E8D5ED1944C8D4004B0EAB /* PBXTargetDependency */,
+			);
+			name = ToilerSoundsTests;
+			productName = ToilerSoundsTests;
+			productReference = 04E8D5E61944C8D4004B0EAB /* ToilerSoundsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04E8D5BE1944C8D3004B0EAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Djipsy;
+				TargetAttributes = {
+					04E8D5C51944C8D3004B0EAB = {
+						DevelopmentTeam = 83CFFPB4WN;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					04E8D5E51944C8D4004B0EAB = {
+						TestTargetID = 04E8D5C51944C8D3004B0EAB;
+					};
+				};
+			};
+			buildConfigurationList = 04E8D5C11944C8D3004B0EAB /* Build configuration list for PBXProject "ToilerSounds" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04E8D5BD1944C8D3004B0EAB;
+			productRefGroup = 04E8D5C71944C8D3004B0EAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04E8D5C51944C8D3004B0EAB /* ToilerSounds */,
+				04E8D5E51944C8D4004B0EAB /* ToilerSoundsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04E8D5C41944C8D3004B0EAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04F46AD91945288D00DFFBC6 /* button-play.png in Resources */,
+				04E8D5D61944C8D3004B0EAB /* InfoPlist.strings in Resources */,
+				04E8D5E11944C8D3004B0EAB /* Images.xcassets in Resources */,
+				04F46ADE19453E5D00DFFBC6 /* SoundTableViewCell.xib in Resources */,
+				04F46AD51945288D00DFFBC6 /* button-play_pressed.png in Resources */,
+				04F46AD61945288D00DFFBC6 /* button-play_pressed@2x.png in Resources */,
+				04F46AD71945288D00DFFBC6 /* button-play_pressing.png in Resources */,
+				04F46ADA1945288D00DFFBC6 /* button-play@2x.png in Resources */,
+				04F46AD81945288D00DFFBC6 /* button-play_pressing@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E8D5E41944C8D4004B0EAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E8D5F31944C8D4004B0EAB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04E8D5C21944C8D3004B0EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E8D62C1944E93D004B0EAB /* MySoundsViewController.m in Sources */,
+				04F46AC81945259C00DFFBC6 /* SoundStore.m in Sources */,
+				04E8D62F1944E94E004B0EAB /* PartySoundsViewController.m in Sources */,
+				04E8D6321944E960004B0EAB /* RecordSoundsViewController.m in Sources */,
+				04F46ACB194525AF00DFFBC6 /* DownloadManager.m in Sources */,
+				04E8D6281944E8AC004B0EAB /* FrontViewController.m in Sources */,
+				04F46AC41945255A00DFFBC6 /* Sound.m in Sources */,
+				04E8D5D81944C8D3004B0EAB /* main.m in Sources */,
+				04F46AE119454D2600DFFBC6 /* SoundRecordePlayer.m in Sources */,
+				04E8D637194505E9004B0EAB /* Constants.m in Sources */,
+				04E8D5DF1944C8D3004B0EAB /* ToilerSounds.xcdatamodeld in Sources */,
+				04E8D5DC1944C8D3004B0EAB /* TSAppDelegate.m in Sources */,
+				04F46ACE194525F600DFFBC6 /* SoundTableViewCell.m in Sources */,
+				04E8D6221944E744004B0EAB /* SWRevealViewController.m in Sources */,
+				04E8D6251944E899004B0EAB /* RearViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E8D5E21944C8D4004B0EAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E8D5F51944C8D4004B0EAB /* ToilerSoundsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04E8D5ED1944C8D4004B0EAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04E8D5C51944C8D3004B0EAB /* ToilerSounds */;
+			targetProxy = 04E8D5EC1944C8D4004B0EAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04E8D5D41944C8D3004B0EAB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E8D5D51944C8D3004B0EAB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		04E8D5F11944C8D4004B0EAB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E8D5F21944C8D4004B0EAB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04E8D5F61944C8D4004B0EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		04E8D5F71944C8D4004B0EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04E8D5F91944C8D4004B0EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ToilerSounds/ToilerSounds.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToilerSounds/ToilerSounds-Prefix.pch";
+				INFOPLIST_FILE = "ToilerSounds/ToilerSounds-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		04E8D5FA1944C8D4004B0EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = ToilerSounds/ToilerSounds.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToilerSounds/ToilerSounds-Prefix.pch";
+				INFOPLIST_FILE = "ToilerSounds/ToilerSounds-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		04E8D5FC1944C8D4004B0EAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToilerSounds.app/ToilerSounds";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToilerSounds/ToilerSounds-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ToilerSoundsTests/ToilerSoundsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		04E8D5FD1944C8D4004B0EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToilerSounds.app/ToilerSounds";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToilerSounds/ToilerSounds-Prefix.pch";
+				INFOPLIST_FILE = "ToilerSoundsTests/ToilerSoundsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04E8D5C11944C8D3004B0EAB /* Build configuration list for PBXProject "ToilerSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E8D5F61944C8D4004B0EAB /* Debug */,
+				04E8D5F71944C8D4004B0EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E8D5F81944C8D4004B0EAB /* Build configuration list for PBXNativeTarget "ToilerSounds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E8D5F91944C8D4004B0EAB /* Debug */,
+				04E8D5FA1944C8D4004B0EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E8D5FB1944C8D4004B0EAB /* Build configuration list for PBXNativeTarget "ToilerSoundsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E8D5FC1944C8D4004B0EAB /* Debug */,
+				04E8D5FD1944C8D4004B0EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04E8D5DD1944C8D3004B0EAB /* ToilerSounds.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04E8D5DE1944C8D3004B0EAB /* ToilerSounds.xcdatamodel */,
+			);
+			currentVersion = 04E8D5DE1944C8D3004B0EAB /* ToilerSounds.xcdatamodel */;
+			path = ToilerSounds.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 04E8D5BE1944C8D3004B0EAB /* Project object */;
+}
