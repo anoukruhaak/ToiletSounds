@@ -8,6 +8,7 @@
 
 #import "MySoundsViewController.h"
 #import "SWRevealViewController.h"
+#import "PartySoundsViewController.h"
 #import "RecordSoundsViewController.h"
 #import "SoundTableViewCell.h"
 #import "SoundStore.h"
@@ -96,7 +97,7 @@
 	SoundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"soundCell"];
 
 	
-	if (nil == cell)
+	if (cell == nil)
 	{
 		[tableView registerNib:[UINib nibWithNibName:@"SoundTableViewCell" bundle:nil]  forCellReuseIdentifier:@"soundCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"soundCell"];
@@ -115,9 +116,38 @@
     }
     cell.recordedAt.text = soundDate;
     
+    //Add target for play audio
+    //Add target for send audio to server
+    [cell.sendSound addTarget:self action:@selector(sendSound:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     return  cell;
 
+}
+
+-(void)sendSound:(id)sender
+{
+    //Get the cell
+    UIView *contentView = [sender superview];
+    UIView *scrollView = [contentView superview];
+    SoundTableViewCell *cell = (SoundTableViewCell *)[scrollView superview];
     
+    //Get Sound
+    Sound *sound = [allSounds objectAtIndex:[self.soundsTableView indexPathForCell:cell].row];
+    NSLog(@"Sound:%@", sound.soundName);
+    
+    //Ask for party number (unless we have one that is less than 24h old
+    
+    //Send it
+    
+    //Show activityIndicator
+    
+    //Go to stream
+    PartySoundsViewController *partyVC = [PartySoundsViewController new];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:partyVC];
+    SWRevealViewController *rev = (SWRevealViewController *)self.navigationController.parentViewController;
+    [rev pushFrontViewController:nav animated:NO];
+
 }
 
 -(void)pushRecordController
