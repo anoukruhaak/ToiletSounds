@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0403B1F519487DF8003BDF8C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0403B1F419487DF8003BDF8C /* LoginViewController.m */; };
 		04E8D5CA1944C8D3004B0EAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5C91944C8D3004B0EAB /* Foundation.framework */; };
 		04E8D5CC1944C8D3004B0EAB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5CB1944C8D3004B0EAB /* CoreGraphics.framework */; };
 		04E8D5CE1944C8D3004B0EAB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E8D5CD1944C8D3004B0EAB /* UIKit.framework */; };
@@ -41,7 +42,6 @@
 		04F46AD91945288D00DFFBC6 /* button-play.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46AD31945288D00DFFBC6 /* button-play.png */; };
 		04F46ADA1945288D00DFFBC6 /* button-play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F46AD41945288D00DFFBC6 /* button-play@2x.png */; };
 		04F46ADE19453E5D00DFFBC6 /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F46ADD19453E5D00DFFBC6 /* SoundTableViewCell.xib */; };
-		04F46AE119454D2600DFFBC6 /* SoundRecordePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F46AE019454D2600DFFBC6 /* SoundRecordePlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0403B1F319487DF8003BDF8C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0403B1F419487DF8003BDF8C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		04E8D5C61944C8D3004B0EAB /* ToilerSounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToilerSounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E8D5C91944C8D3004B0EAB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04E8D5CB1944C8D3004B0EAB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,8 +106,6 @@
 		04F46AD31945288D00DFFBC6 /* button-play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play.png"; path = "Assets/button-play.png"; sourceTree = "<group>"; };
 		04F46AD41945288D00DFFBC6 /* button-play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-play@2x.png"; path = "Assets/button-play@2x.png"; sourceTree = "<group>"; };
 		04F46ADD19453E5D00DFFBC6 /* SoundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundTableViewCell.xib; sourceTree = "<group>"; };
-		04F46ADF19454D2600DFFBC6 /* SoundRecorderPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundRecorderPlayer.h; sourceTree = "<group>"; };
-		04F46AE019454D2600DFFBC6 /* SoundRecordePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundRecordePlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +138,6 @@
 		04E8D5BD1944C8D3004B0EAB = {
 			isa = PBXGroup;
 			children = (
-				04F46ADF19454D2600DFFBC6 /* SoundRecorderPlayer.h */,
-				04F46AE019454D2600DFFBC6 /* SoundRecordePlayer.m */,
 				04E8D5D11944C8D3004B0EAB /* ToilerSounds */,
 				04E8D5EE1944C8D4004B0EAB /* ToilerSoundsTests */,
 				04E8D5C81944C8D3004B0EAB /* Frameworks */,
@@ -232,6 +230,8 @@
 				04E8D6241944E899004B0EAB /* RearViewController.m */,
 				04E8D6201944E744004B0EAB /* SWRevealViewController.h */,
 				04E8D6211944E744004B0EAB /* SWRevealViewController.m */,
+				0403B1F319487DF8003BDF8C /* LoginViewController.h */,
+				0403B1F419487DF8003BDF8C /* LoginViewController.m */,
 			);
 			name = "Hamburger nav";
 			sourceTree = "<group>";
@@ -395,13 +395,13 @@
 				04E8D6281944E8AC004B0EAB /* FrontViewController.m in Sources */,
 				04F46AC41945255A00DFFBC6 /* Sound.m in Sources */,
 				04E8D5D81944C8D3004B0EAB /* main.m in Sources */,
-				04F46AE119454D2600DFFBC6 /* SoundRecordePlayer.m in Sources */,
 				04E8D637194505E9004B0EAB /* Constants.m in Sources */,
 				04E8D5DF1944C8D3004B0EAB /* ToilerSounds.xcdatamodeld in Sources */,
 				04E8D5DC1944C8D3004B0EAB /* TSAppDelegate.m in Sources */,
 				04F46ACE194525F600DFFBC6 /* SoundTableViewCell.m in Sources */,
 				04E8D6221944E744004B0EAB /* SWRevealViewController.m in Sources */,
 				04E8D6251944E899004B0EAB /* RearViewController.m in Sources */,
+				0403B1F519487DF8003BDF8C /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

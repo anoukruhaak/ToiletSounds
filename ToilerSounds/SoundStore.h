@@ -7,7 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Sound;
 
 @interface SoundStore : NSObject
+{
+    NSManagedObjectContext *context;
+    NSManagedObjectModel *model;
+    NSMutableArray *allSounds;
+    
+}
+
++ (SoundStore *)sharedStore;
+
+- (NSString *)itemArchivePath;
+
+- (BOOL)saveChanges;
+- (Sound *)createNewSound;
+- (NSArray *)allSounds;
+- (void)removeSound:(Sound *)sound;
+
 
 @end

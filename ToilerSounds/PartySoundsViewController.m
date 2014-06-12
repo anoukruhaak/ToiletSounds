@@ -79,4 +79,9 @@
     
 }
 
+-(void)dealloc
+{
+    self.partySoundsTable = nil;
+}
+
 @end

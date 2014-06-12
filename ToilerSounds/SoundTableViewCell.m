@@ -51,7 +51,7 @@
 {
     [super layoutSubviews];
     // Cell margin
-    self.contentView.frame = CGRectMake(10, 0, self.frame.size.width -20, self.frame.size.height -10);
+    self.contentView.frame = CGRectMake(10, 10, self.frame.size.width -20, self.frame.size.height -10);
     
     // Cell content background
     self.contentView.backgroundColor = [UIColor whiteColor];
