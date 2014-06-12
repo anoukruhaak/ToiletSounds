@@ -183,9 +183,7 @@
         self.mySound.dateCreated = [NSDate new];
         self.mySound.soundData =[NSData dataWithContentsOfURL:self.soundRecorder.url];
         self.mySound.soundName = @"New Sound";
-        
-        //now make it possible to edit the name
-        self.soundName.enabled = YES;
+
 
         //create player and play sound
         NSError *error;
