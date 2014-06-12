@@ -15,7 +15,6 @@
 
 @interface RecordSoundsViewController () <UITextFieldDelegate, AVAudioRecorderDelegate>
 @property (nonatomic, strong) UIButton *recordButton;
-@property (nonatomic, strong) UITextField *soundName;
 @property (nonatomic, strong) AVAudioRecorder *soundRecorder;
 @property (nonatomic, strong) AVAudioPlayer *soundPlayer;
 @property (nonatomic, strong) Sound *mySound;
@@ -46,18 +45,6 @@
     self.recordButton.layer.borderWidth = 14.0;
     [self.view addSubview:_recordButton];
     [self.recordButton addTarget:self action:@selector(recordButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.soundName = [[UITextField alloc]initWithFrame:CGRectMake(20, 120, 280, 55)];
-    self.soundName.layer.cornerRadius = 4;
-    self.soundName.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    self.soundName.layer.borderWidth = 2.0;
-    self.soundName.backgroundColor = [UIColor whiteColor];
-    self.soundName.placeholder = @"Name your sound";
-    self.soundName.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:_soundName];
-    self.soundName.enabled = NO;
-    self.soundName.delegate = self;
-
     
     self.title = NSLocalizedString(@"Record", nil);
     
@@ -128,6 +115,7 @@
 
 -(void)saveSound
 {
+    //Show a popup asking for a name.
     
 }
 
@@ -233,7 +221,6 @@
 -(void)dealloc
 {
     self.recordButton = nil;
-    self.soundName = nil;
 }
 
 
