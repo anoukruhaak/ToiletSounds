@@ -55,6 +55,7 @@
     [self.view addSubview:_email];
     
     self.password = [[UITextField alloc]initWithFrame:CGRectMake(20, 170, 280, 40)];
+    self.password.secureTextEntry = YES;
     self.password.layer.cornerRadius = 4.0;
     self.password.textAlignment = NSTextAlignmentCenter;
     self.password.delegate = self;
