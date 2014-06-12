@@ -46,7 +46,7 @@
     [self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
     [self.view addGestureRecognizer:revealController.panGestureRecognizer];
     
-    UIBarButtonItem *recordMenuButton = [[UIBarButtonItem alloc]initWithTitle:@"Record" style:UIBarButtonItemStylePlain target:revealController action:@selector(rightRevealToggle:)];
+    UIBarButtonItem *recordMenuButton = [[UIBarButtonItem alloc]initWithTitle:@"Record" style:UIBarButtonItemStylePlain target:self action:@selector(pushRecordController)];
     self.navigationItem.rightBarButtonItem = recordMenuButton;
     
     UIBarButtonItem *revealMenuButton = [[UIBarButtonItem alloc] initWithTitle:@"☰" style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
@@ -120,12 +120,11 @@
     
 }
 
--(void)record
+-(void)pushRecordController
 {
     //Move to the record view (adds an additional layer to the hamburger nav)
-    RecordSoundsViewController *recordVC = [RecordSoundsViewController new];
-    [(SWRevealViewController *)self.parentViewController setRightViewController:recordVC];
-    [(SWRevealViewController *)self.parentViewController.navigationController rightRevealToggleAnimated:NO];
+    RecordSoundsViewController *recordVC = [[RecordSoundsViewController alloc] init];
+	[self.navigationController pushViewController:recordVC animated:YES];
 }
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath

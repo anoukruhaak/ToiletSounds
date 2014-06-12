@@ -85,16 +85,13 @@
 	
 	if (row == 0)
 	{
-		cell.textLabel.text = @"Record";
+		cell.textLabel.text = @"My Sounds";
 	}
 	else if (row == 1)
 	{
-		cell.textLabel.text = @"My Sounds";
+		cell.textLabel.text = @"Party Stream";
 	}
-	else if (row == 2)
-	{
-		cell.textLabel.text = @"Sound Stream";
-	}
+	
 	
 	return cell;
 }
@@ -113,24 +110,6 @@
 	// Here you'd implement some of your own logic... I simply take for granted that the first row (=0) corresponds to the "FrontViewController".
 	if (row == 0)
 	{
-		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
-        if ( ![frontNavigationController.topViewController isKindOfClass:[RecordSoundsViewController class]] )
-        {
-			RecordSoundsViewController *frontViewController = [[RecordSoundsViewController alloc] init];
-			UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-			[revealController pushFrontViewController:navigationController animated:YES];
-        }
-		// Seems the user attempts to 'switch' to exactly the same controller he came from!
-		else
-		{
-            [revealController revealToggleAnimated:YES];
-		}
-	}
-    
-	// ... and the second row (=1) corresponds to the "MapViewController".
-	else if (row == 1)
-	{
-		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
         if ( ![frontNavigationController.topViewController isKindOfClass:[MySoundsViewController class]] )
         {
 			MySoundsViewController *mapViewController = [[MySoundsViewController alloc] init];
@@ -143,10 +122,11 @@
 		{
             [revealController revealToggleAnimated:YES];
 		}
-	}
-	else if (row == 2)
+    }
+	// ... and the second row (=1) corresponds to the "MapViewController".
+	else if (row == 1)
 	{
-        // Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
+		// Now let's see if we're not attempting to swap the current frontViewController for a new instance of ITSELF, which'd be highly redundant.
         if ( ![frontNavigationController.topViewController isKindOfClass:[PartySoundsViewController class]] )
         {
 			PartySoundsViewController *mapViewController = [[PartySoundsViewController alloc] init];

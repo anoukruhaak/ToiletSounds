@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "SWRevealViewController.h"
 #import "RecordSoundsViewController.h"
-
+#import "MySoundsViewController.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 {
@@ -92,8 +92,10 @@
         [[NSUserDefaults standardUserDefaults]setValue:userEmail forKey:@"email"];
         [[NSUserDefaults standardUserDefaults]setValue:@"loggedIn" forKey: @"login_status"];
         
-        RecordSoundsViewController *recVC = [[RecordSoundsViewController alloc]init];
-        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:recVC];
+    
+        MySoundsViewController *mySoundVC = [MySoundsViewController new];
+
+        UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:mySoundVC];
         
         [(SWRevealViewController*)self.parentViewController pushFrontViewController:frontNavigationController animated:NO];
     }

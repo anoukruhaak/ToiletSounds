@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Sound.h"
 #import "SoundStore.h"
+#import "MySoundsViewController.h"
 
 @interface RecordSoundsViewController () <UITextFieldDelegate, AVAudioRecorderDelegate>
 @property (nonatomic, strong) UIButton *recordButton;
@@ -60,15 +61,8 @@
     
     self.title = NSLocalizedString(@"Record", nil);
     
-    SWRevealViewController *revealController = [self revealViewController];
-    [revealController panGestureRecognizer];
-    [revealController tapGestureRecognizer];
-    
-    [self.navigationController.navigationBar addGestureRecognizer:revealController.panGestureRecognizer];
-    [self.view addGestureRecognizer:revealController.panGestureRecognizer];
-    
-    UIBarButtonItem *revealMenuButton = [[UIBarButtonItem alloc] initWithTitle:@"☰" style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
-    self.navigationItem.leftBarButtonItem = revealMenuButton;
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Not Now" style:UIBarButtonItemStylePlain target:self action:@selector(cancelRecording)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
     
     //Start an audio session to get recording to work (ios weirdness)
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -132,11 +126,18 @@
 
 #pragma mark - UIButton presses
 
--(void)pressedSave
+-(void)saveSound
 {
-    //Create core data object for mySound
-    //Reset mySound
-    //Go to MySounds Page
+    
+}
+
+-(void)cancelRecording
+{
+    if (self.mySound) {
+        [[SoundStore sharedStore]removeSound:self.mySound];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)recordButtonPressed

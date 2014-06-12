@@ -12,6 +12,7 @@
 #import "RearViewController.h"
 #import "SoundStore.h"
 #import "LoginViewController.h"
+#import "MySoundsViewController.h"
 
 @interface TSAppDelegate()<SWRevealViewControllerDelegate>
 @end
@@ -34,10 +35,10 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window = window;
     
-    RecordSoundsViewController *recordViewController = [[RecordSoundsViewController alloc] init];
 	RearViewController *rearViewController = [[RearViewController alloc] init];
+    MySoundsViewController *soundsVC = [MySoundsViewController new];
     
-    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:recordViewController];
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:soundsVC];
     UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
     
     SWRevealViewController *mainRevealController = [[SWRevealViewController alloc]
@@ -48,10 +49,12 @@
 	
 	self.window.rootViewController = self.viewController;
     
-    if (![[[NSUserDefaults standardUserDefaults]valueForKeyPath:@"login_status"] isEqualToString:@"loggeIn"]) {
+    if (![[[NSUserDefaults standardUserDefaults]valueForKeyPath:@"login_status"] isEqualToString:@"loggedIn"]) {
         LoginViewController *loginVC = [LoginViewController new];
-        [self.viewController pushFrontViewController:loginVC animated:NO];
+      [self.viewController pushFrontViewController:loginVC animated:NO];
+        
     }
+    
     self.window.backgroundColor= [UIColor whiteColor];
 	[self.window makeKeyAndVisible];
 	return YES;
