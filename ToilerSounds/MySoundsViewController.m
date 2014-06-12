@@ -14,7 +14,7 @@
 #import "SoundStore.h"
 #import "Sound.h"
 
-@interface MySoundsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MySoundsViewController () <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 {
     NSArray *allSounds;
     NSDateFormatter *dateFormatter;
@@ -137,18 +137,48 @@
     NSLog(@"Sound:%@", sound.soundName);
     
     //Ask for party number (unless we have one that is less than 24h old
+    NSDate *lastParty = [[NSUserDefaults standardUserDefaults]objectForKey:@"lastParty"];
+    NSDate *now = [NSDate new];
     
-    //Send it
     
-    //Show activityIndicator
+    if (!lastParty ) {
+        //Create popup asking party number
+        UIAlertView *nameAlert = [[UIAlertView alloc]initWithTitle:@"Party Code" message:@"Enter the code for your party" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        
+        //Add a textfield
+        nameAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
+        
+        //set delegate
+        nameAlert.delegate = self;
+        
+        [nameAlert show];
+
+        }else{
+            
+            [self acceptSendSound];
+        }
     
-    //Go to stream
+    //Go to stream. TODO: this belongs in the callback from the downloadmanager
+
+}
+
+-(void)acceptSendSound
+{
+    //send
+    //show buffer -> wait for replay
+    [self moveToStreams];
+    
+}
+
+-(void)moveToStreams
+{
     PartySoundsViewController *partyVC = [PartySoundsViewController new];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:partyVC];
     SWRevealViewController *rev = (SWRevealViewController *)self.navigationController.parentViewController;
     [rev pushFrontViewController:nav animated:NO];
-
+    
 }
+
 
 -(void)pushRecordController
 {
@@ -177,6 +207,25 @@
         [self.soundsTableView reloadData];
     }
 }
+
+#pragma mark - AlertView delegate
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    //Create a date for the party
+    NSDate *updated = [NSDate new];
+    NSString *partyid = [alertView textFieldAtIndex:0].text;
+    [[NSUserDefaults standardUserDefaults]setObject:partyid forKey:@"party_id"];
+    [[NSUserDefaults standardUserDefaults]setObject:updated forKey:@"lastParty"];
+    NSLog(@"%@,%@", updated, partyid);
+    
+    //Now show the activityIndicator
+        [self moveToStreams];
+    
+}
+
+// TODO: if error (part_id), delete lastParty date and ask user to give id again.
+// TODO: if success go to the stream
 
 -(void)dealloc
 {

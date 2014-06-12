@@ -13,11 +13,12 @@
 #import "SoundStore.h"
 #import "MySoundsViewController.h"
 
-@interface RecordSoundsViewController () <UITextFieldDelegate, AVAudioRecorderDelegate>
+@interface RecordSoundsViewController () <UIAlertViewDelegate, AVAudioRecorderDelegate>
 @property (nonatomic, strong) UIButton *recordButton;
 @property (nonatomic, strong) AVAudioRecorder *soundRecorder;
 @property (nonatomic, strong) AVAudioPlayer *soundPlayer;
 @property (nonatomic, strong) Sound *mySound;
+@property (nonatomic, strong) UIButton *saveButton;
 
 @end
 
@@ -48,8 +49,17 @@
     
     self.title = NSLocalizedString(@"Record", nil);
     
+    //Cancel
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Not Now" style:UIBarButtonItemStylePlain target:self action:@selector(cancelRecording)];
     self.navigationItem.leftBarButtonItem = cancelButton;
+    
+    //Save
+    self.saveButton = [[UIButton alloc]initWithFrame:CGRectMake(320-80.0, 420, 60, 30)];
+    self.saveButton.layer.cornerRadius = 4.0;
+    [self.saveButton setTitle:@"Done" forState:UIControlStateNormal];
+    self.saveButton.titleLabel.textColor = [UIColor blackColor];
+    [self.saveButton addTarget:self action:@selector(saveButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_saveButton];
     
     //Start an audio session to get recording to work (ios weirdness)
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -113,9 +123,18 @@
 
 #pragma mark - UIButton presses
 
--(void)saveSound
+-(void)saveButtonPressed
 {
-    //Show a popup asking for a name.
+    //Create popup asking for a name.
+    UIAlertView *nameAlert = [[UIAlertView alloc]initWithTitle:@"Save" message:@"Give your sound a name" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    
+    //Add a textfield
+    nameAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    //set delegate
+    nameAlert.delegate = self;
+    
+    [nameAlert show];
     
 }
 
@@ -165,12 +184,22 @@
     return YES;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    [[self view] endEditing:YES];
+#pragma mark - AlertView delegate
 
-     self.mySound.soundName = textField.text;
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    self.mySound.soundName = [alertView textFieldAtIndex:0].text;
+    
+    if ([self.navigationController.parentViewController isMemberOfClass:[MySoundsViewController class]]) {
+        [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+    }else{
+        //Create new nav:
+        MySoundsViewController *soundVC = [MySoundsViewController new];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:soundVC];
+        SWRevealViewController *rev = (SWRevealViewController *)self.navigationController.parentViewController;
+        [rev pushFrontViewController:nav animated:NO];
+    }
+
 }
 
 #pragma mark - audio recorder delegate

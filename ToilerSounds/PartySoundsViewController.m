@@ -8,6 +8,7 @@
 
 #import "PartySoundsViewController.h"
 #import "SWRevealViewController.h"
+#import "RecordSoundsViewController.h"
 
 @interface PartySoundsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)UITableView *partySoundsTable;
@@ -39,6 +40,9 @@
     
     UIBarButtonItem *revealMenuButton = [[UIBarButtonItem alloc] initWithTitle:@"☰" style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = revealMenuButton;
+    
+    UIBarButtonItem *recordMenuButton = [[UIBarButtonItem alloc]initWithTitle:@"Record" style:UIBarButtonItemStylePlain target:self action:@selector(pushRecordController)];
+    self.navigationItem.rightBarButtonItem = recordMenuButton;
     
     self.partySoundsTable = [[UITableView alloc]initWithFrame:self.view.frame];
     self.partySoundsTable.delegate = self;
@@ -72,12 +76,20 @@
 	}
     
     cell.textLabel.text = @"Sound";
-    cell.detailTextLabel.text =@"Created by: John Doe";
+    cell.detailTextLabel.text =@"By Carl Carlson";
     
     return  cell;
     
     
 }
+
+-(void)pushRecordController
+{
+    //Move to the record view (adds an additional layer to the hamburger nav)
+    RecordSoundsViewController *recordVC = [[RecordSoundsViewController alloc] init];
+	[self.navigationController pushViewController:recordVC animated:YES];
+}
+
 
 -(void)dealloc
 {
