@@ -85,6 +85,60 @@
     
 }
 
+-(void)requestSounds
+{
+    NSURL *baseUrl = [[NSURL alloc]initWithString:@"myUrl"];
+    NSDictionary *sounds;
+    
+    NSURLSessionConfiguration *sessionConfig =
+    [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    // 1
+    sessionConfig.allowsCellularAccess = YES;
+    
+    // 2
+    [sessionConfig setHTTPAdditionalHeaders:
+     @{@"Accept": @"application/json"}];
+    
+}
+
+-(void)getSoundForUrl
+{
+    NSURL *audioUrl;
+    
+    // 1
+    NSURLSessionConfiguration *sessionConfig =
+    [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    // 2
+    NSURLSession *session =
+    [NSURLSession sessionWithConfiguration:sessionConfig
+                                  delegate:self
+                             delegateQueue:nil];
+    
+    //3
+    NSURLSessionDownloadTask *getAudioTask =
+    [session downloadTaskWithURL:audioUrl
+     
+               completionHandler:^(NSURL *location,
+                                   NSURLResponse *response,
+                                   NSError *error) {
+                   // 4
+                   NSData *downloadedAudio =
+                   [NSData dataWithContentsOfURL:location];
+                   
+                   //5
+                   dispatch_async(dispatch_get_main_queue(), ^{
+                       // do stuff with audio
+                       
+                   });
+               }];
+    
+    // 6
+    [getAudioTask resume];
+}
+
+
 -(void)pushRecordController
 {
     //Move to the record view (adds an additional layer to the hamburger nav)
