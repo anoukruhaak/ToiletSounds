@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A05A433F-0B2F-4769-9818-4D6B7D9DE0B5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ToilerSounds</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9E5BE33A-B407-4B70-B462-563F066C7FEC</key>
+		<string>ssh://github.com/anoukruhaak/ToiletSounds.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ToilerSounds.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9E5BE33A-B407-4B70-B462-563F066C7FEC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/anoukruhaak/ToiletSounds.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9E5BE33A-B407-4B70-B462-563F066C7FEC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9E5BE33A-B407-4B70-B462-563F066C7FEC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ToiletSounds</string>
+		</dict>
+	</array>
+</dict>
+</plist>
