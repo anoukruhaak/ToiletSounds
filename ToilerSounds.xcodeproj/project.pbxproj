@@ -70,6 +70,14 @@
 		CCB18CDC194B0187007E6DFC /* setting-icon@2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CC0194B0187007E6DFC /* setting-icon@2.png */; };
 		CCB18CDD194B0187007E6DFC /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CC1194B0187007E6DFC /* speaker.png */; };
 		CCB18CDE194B0187007E6DFC /* speaker@2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CC2194B0187007E6DFC /* speaker@2.png */; };
+		CCB18CE1194B0601007E6DFC /* ohman-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CDF194B0601007E6DFC /* ohman-icon-pressed.png */; };
+		CCB18CE2194B0601007E6DFC /* ohman-icon-pressed@2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CE0194B0601007E6DFC /* ohman-icon-pressed@2.png */; };
+		CCB18CE7194B060A007E6DFC /* aggressive-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CE3194B060A007E6DFC /* aggressive-icon-pressed.png */; };
+		CCB18CE8194B060A007E6DFC /* aggressive-icon-pressed@2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CE4194B060A007E6DFC /* aggressive-icon-pressed@2.png */; };
+		CCB18CE9194B060A007E6DFC /* chillOut-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CE5194B060A007E6DFC /* chillOut-icon-pressed.png */; };
+		CCB18CEA194B060A007E6DFC /* chillOut-icon-pressed@2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CE6194B060A007E6DFC /* chillOut-icon-pressed@2.png */; };
+		CCB18CED194B0617007E6DFC /* rec-icon-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CEB194B0617007E6DFC /* rec-icon-pressed.png */; };
+		CCB18CEE194B0617007E6DFC /* rec-icon-pressed@2.png in Resources */ = {isa = PBXBuildFile; fileRef = CCB18CEC194B0617007E6DFC /* rec-icon-pressed@2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +170,14 @@
 		CCB18CC0194B0187007E6DFC /* setting-icon@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-icon@2.png"; sourceTree = "<group>"; };
 		CCB18CC1194B0187007E6DFC /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		CCB18CC2194B0187007E6DFC /* speaker@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker@2.png"; sourceTree = "<group>"; };
+		CCB18CDF194B0601007E6DFC /* ohman-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohman-icon-pressed.png"; sourceTree = "<group>"; };
+		CCB18CE0194B0601007E6DFC /* ohman-icon-pressed@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ohman-icon-pressed@2.png"; sourceTree = "<group>"; };
+		CCB18CE3194B060A007E6DFC /* aggressive-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aggressive-icon-pressed.png"; sourceTree = "<group>"; };
+		CCB18CE4194B060A007E6DFC /* aggressive-icon-pressed@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aggressive-icon-pressed@2.png"; sourceTree = "<group>"; };
+		CCB18CE5194B060A007E6DFC /* chillOut-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chillOut-icon-pressed.png"; sourceTree = "<group>"; };
+		CCB18CE6194B060A007E6DFC /* chillOut-icon-pressed@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chillOut-icon-pressed@2.png"; sourceTree = "<group>"; };
+		CCB18CEB194B0617007E6DFC /* rec-icon-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rec-icon-pressed.png"; sourceTree = "<group>"; };
+		CCB18CEC194B0617007E6DFC /* rec-icon-pressed@2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rec-icon-pressed@2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +349,14 @@
 		CCB18CA6194B0187007E6DFC /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				CCB18CEB194B0617007E6DFC /* rec-icon-pressed.png */,
+				CCB18CEC194B0617007E6DFC /* rec-icon-pressed@2.png */,
+				CCB18CE3194B060A007E6DFC /* aggressive-icon-pressed.png */,
+				CCB18CE4194B060A007E6DFC /* aggressive-icon-pressed@2.png */,
+				CCB18CE5194B060A007E6DFC /* chillOut-icon-pressed.png */,
+				CCB18CE6194B060A007E6DFC /* chillOut-icon-pressed@2.png */,
+				CCB18CDF194B0601007E6DFC /* ohman-icon-pressed.png */,
+				CCB18CE0194B0601007E6DFC /* ohman-icon-pressed@2.png */,
 				CCB18CA7194B0187007E6DFC /* aggressive-icon.png */,
 				CCB18CA8194B0187007E6DFC /* aggressive-icon@2.png */,
 				CCB18CA9194B0187007E6DFC /* audio-button.png */,
@@ -454,6 +478,7 @@
 			files = (
 				CCB18CCC194B0187007E6DFC /* dj-downloaded@2.png in Resources */,
 				CCB18CDB194B0187007E6DFC /* setting-icon.png in Resources */,
+				CCB18CEA194B060A007E6DFC /* chillOut-icon-pressed@2.png in Resources */,
 				CCB18CCB194B0187007E6DFC /* dj-downloaded.png in Resources */,
 				CCB18CD5194B0187007E6DFC /* pause-button.png in Resources */,
 				CCB18CD1194B0187007E6DFC /* ohman-icon.png in Resources */,
@@ -467,19 +492,26 @@
 				04F46ADE19453E5D00DFFBC6 /* SoundTableViewCell.xib in Resources */,
 				CCB18CC7194B0187007E6DFC /* chillOut-icon.png in Resources */,
 				CCB18CD4194B0187007E6DFC /* partyList-icon@2.png in Resources */,
+				CCB18CE7194B060A007E6DFC /* aggressive-icon-pressed.png in Resources */,
+				CCB18CE8194B060A007E6DFC /* aggressive-icon-pressed@2.png in Resources */,
 				04F46AD51945288D00DFFBC6 /* button-play_pressed.png in Resources */,
 				CCB18CD9194B0187007E6DFC /* rec-icon.png in Resources */,
 				CCB18CD7194B0187007E6DFC /* play-button.png in Resources */,
 				CCB18CC4194B0187007E6DFC /* aggressive-icon@2.png in Resources */,
+				CCB18CED194B0617007E6DFC /* rec-icon-pressed.png in Resources */,
+				CCB18CE1194B0601007E6DFC /* ohman-icon-pressed.png in Resources */,
+				CCB18CEE194B0617007E6DFC /* rec-icon-pressed@2.png in Resources */,
 				CCB18CC5194B0187007E6DFC /* audio-button.png in Resources */,
 				04F46AD61945288D00DFFBC6 /* button-play_pressed@2x.png in Resources */,
 				CCB18CCF194B0187007E6DFC /* mySoundList-icon.png in Resources */,
+				CCB18CE9194B060A007E6DFC /* chillOut-icon-pressed.png in Resources */,
 				04F46AD71945288D00DFFBC6 /* button-play_pressing.png in Resources */,
 				CCB18CD3194B0187007E6DFC /* partyList-icon.png in Resources */,
 				CCB18CDC194B0187007E6DFC /* setting-icon@2.png in Resources */,
 				CCB18CDD194B0187007E6DFC /* speaker.png in Resources */,
 				CCB18CDA194B0187007E6DFC /* rec-icon@2.png in Resources */,
 				CCB18CDE194B0187007E6DFC /* speaker@2.png in Resources */,
+				CCB18CE2194B0601007E6DFC /* ohman-icon-pressed@2.png in Resources */,
 				CCB18CD0194B0187007E6DFC /* mySoundList-icon@2.png in Resources */,
 				CCB18CC6194B0187007E6DFC /* audio-button@2.png in Resources */,
 				CCB18CD2194B0187007E6DFC /* ohman-icon@2.png in Resources */,
