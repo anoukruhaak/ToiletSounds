@@ -15,10 +15,13 @@
 
 @interface RecordSoundsViewController () <UIAlertViewDelegate, AVAudioRecorderDelegate>
 @property (nonatomic, strong) UIButton *recordButton;
+@property (nonatomic, strong) UIButton *playButton;
+
 @property (nonatomic, strong) AVAudioRecorder *soundRecorder;
 @property (nonatomic, strong) AVAudioPlayer *soundPlayer;
 @property (nonatomic, strong) Sound *mySound;
 @property (nonatomic, strong) UIButton *saveButton;
+
 
 @end
 

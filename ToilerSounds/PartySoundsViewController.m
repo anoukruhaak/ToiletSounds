@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Sound Stream", nil);
+    self.view.backgroundColor = kBackgroundColor;
     
     SWRevealViewController *revealController = [self revealViewController];
     [revealController panGestureRecognizer];
@@ -44,7 +45,8 @@
     UIBarButtonItem *recordMenuButton = [[UIBarButtonItem alloc]initWithTitle:@"Record" style:UIBarButtonItemStylePlain target:self action:@selector(pushRecordController)];
     self.navigationItem.rightBarButtonItem = recordMenuButton;
     
-    self.partySoundsTable = [[UITableView alloc]initWithFrame:self.view.frame];
+    self.partySoundsTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-40)];
+    self.partySoundsTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.partySoundsTable.delegate = self;
     self.partySoundsTable.dataSource = self;
     [self.view addSubview: _partySoundsTable];

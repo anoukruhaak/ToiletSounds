@@ -28,7 +28,11 @@
     self.rearTableView.delegate = self;
     self.rearTableView.dataSource =self;
     self.rearTableView.userInteractionEnabled = YES;
+    self.rearTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_rearTableView];
+    
+    self.view.backgroundColor = kBackgroundColor;
+    self.rearTableView.backgroundColor = [UIColor clearColor];
     
 	// We determine whether we have a grand parent SWRevealViewController, this means we are at least one level behind the hierarchy
     SWRevealViewController *parentRevealController = self.revealViewController;
@@ -77,20 +81,25 @@
 	static NSString *cellIdentifier = @"Cell";
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSInteger row = indexPath.row;
+    
 	
 	if (nil == cell)
 	{
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+         cell.backgroundColor = kBackgroundColor;
 	}
 	
 	if (row == 0)
 	{
-		cell.textLabel.text = @"My Sounds";
+		cell.textLabel.text = @"My Sounds List";
 	}
 	else if (row == 1)
 	{
-		cell.textLabel.text = @"Party Stream";
+		cell.textLabel.text = @"PartyList";
 	}
+    
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
 	
 	
 	return cell;

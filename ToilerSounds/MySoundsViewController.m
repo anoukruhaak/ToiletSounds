@@ -38,8 +38,7 @@
 {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"My Sounds", nil);
-    self.view.backgroundColor = [UIColor colorWithRed:224.0/255.0 green:224.0/255.0 blue:224.0/255.0 alpha:1.0];
-    
+    self.view.backgroundColor = kBackgroundColor;
     SWRevealViewController *revealController = [self revealViewController];
     [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
@@ -53,12 +52,12 @@
     UIBarButtonItem *revealMenuButton = [[UIBarButtonItem alloc] initWithTitle:@"☰" style:UIBarButtonItemStylePlain target:revealController action:@selector(revealToggle:)];
     self.navigationItem.leftBarButtonItem = revealMenuButton;
     
-    self.soundsTableView = [[UITableView alloc]initWithFrame:self.view.frame];
+    self.soundsTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height-40)];
     self.soundsTableView.delegate = self;
     self.soundsTableView.dataSource = self;
     self.soundsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
  
-    self.soundsTableView.backgroundColor =[UIColor colorWithRed:224.0/255.0 green:224.0/255.0 blue:224.0/255.0 alpha:1.0];
+    self.soundsTableView.backgroundColor =[ UIColor whiteColor];
     [self.view addSubview:_soundsTableView];
     
     dateFormatter= [[NSDateFormatter alloc] init];
@@ -88,7 +87,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 115;
+    return 69;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
