@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #define kBackgroundColor [UIColor colorWithRed:146.0/255.0 green:62.0/255.0 blue:209.0/255.0 alpha:1.0];
-#define kNavigationColor [UIColor colorWithRed:179.0/255.0 green:73.0/255.0 blue:242.0/255.0 alpha:1.0];
-#define kNavigationColor2 [UIColor colorWithRed:179.0/255.0 green:73.0/255.0 blue:242.0/255.0 alpha:1.0].CGColor;
+#define kNavigationColor [UIColor colorWithRed:155.0/255.0 green:89.0/255.0 blue:182.0/255.0 alpha:1.0];
+#define kNavigationColor2 [UIColor colorWithRed:142.0/255.0 green:68.0/255.0 blue:173.0/255.0 alpha:1.0].CGColor;
 
 @interface Constants : NSObject
 
