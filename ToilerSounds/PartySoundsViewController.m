@@ -10,8 +10,13 @@
 #import "SWRevealViewController.h"
 #import "RecordSoundsViewController.h"
 
-@interface PartySoundsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface PartySoundsViewController () <UITableViewDelegate, UITableViewDataSource, NSURLSessionDataDelegate>
+
 @property (nonatomic, strong)UITableView *partySoundsTable;
+- (NSString *)getExportFileName;
+- (NSData *)exportToNSData;
+- (BOOL)exportToDiskWithForce:(BOOL)force;
+- (BOOL)importFromPath:(NSString *)importPath;
 
 @end
 
@@ -129,7 +134,7 @@
                    
                    //5
                    dispatch_async(dispatch_get_main_queue(), ^{
-                       // do stuff with audio
+                       // write to file!
                        
                    });
                }];
@@ -138,6 +143,14 @@
     [getAudioTask resume];
 }
 
+- (void)shareAudioFileName:(NSString *)fileName withData:(NSData *)data
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDir = [paths objectAtIndex:0];
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@.cav", documentsDir, fileName];
+
+    [data writeToFile:filePath atomically:NO];
+}
 
 -(void)pushRecordController
 {
